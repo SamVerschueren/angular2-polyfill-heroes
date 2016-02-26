@@ -1,0 +1,7 @@
+node_modules
+src/jspm_packages
+typings
+
+src/**/*.js
+src/**/*.js.map
+!src/config.js

@@ -1,0 +1,45 @@
+{
+  "name": "angular2-polyfill-heroes",
+  "version": "0.0.0",
+  "description": "The Heroes tutorial written with angular2-polyfill",
+  "scripts": {
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "lite": "cd src && lite-server",
+    "start": "concurrent \"npm run tsc:w\" \"npm run lite\"",
+    "typings": "typings",
+    "postinstall": "npm run typings install && jspm install"
+  },
+  "keywords": [
+    "angular2",
+    "ng2",
+    "angular2-polyfill",
+    "heroes",
+    "tutorial"
+  ],
+  "author": "Sam Verschueren",
+  "dependencies": {},
+  "devDependencies": {
+    "angular": "^1.5.0",
+    "angular2-polyfill": "0.0.7",
+    "concurrently": "^2.0.0",
+    "jspm": "^0.16.29",
+    "lite-server": "^2.1.0",
+    "systemjs": "^0.19.22",
+    "typescript": "^1.8.2",
+    "typings": "^0.6.8"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "src"
+    },
+    "dependencies": {
+      "angular": "npm:angular@^1.5.0",
+      "angular2-polyfill": "npm:angular2-polyfill@^0.0.7",
+      "ng-metadata": "npm:ng-metadata@^1.0.0"
+    },
+    "devDependencies": {
+      "typescript": "npm:typescript@^1.6.2"
+    }
+  }
+}
