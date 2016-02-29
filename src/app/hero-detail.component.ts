@@ -1,20 +1,27 @@
-import {Component, Input} from 'angular2-polyfill/core';
+import {Component, OnInit} from 'angular2-polyfill/core';
+import {RouteParams} from 'angular2-polyfill/router';
+import {HeroService} from './hero.service';
 import {Hero} from './hero';
 
 @Component({
 	selector: 'my-hero-detail',
-	template: `
-		<div ng-if="myHeroDetail.hero">
-			<h2>{{myHeroDetail.hero.name}} details!</h2>
-			<div><label>id: </label>{{myHeroDetail.hero.id}}</div>
-			<div>
-				<label>name: </label>
-				<input ng-model="myHeroDetail.hero.name" placeholder="name"/>
-			</div>
-		</div>
-	`
+	templateUrl: 'app/hero-detail.component.html',
+	styleUrls: ['app/hero-detail.component.css']
 })
-export class HeroDetailComponent {
-	@Input()
-	public hero: Hero;
+export class HeroDetailComponent implements OnInit {
+	private hero: Hero;
+
+	constructor(private _heroService: HeroService, private _routeParams: RouteParams) {
+
+	}
+
+	goBack() {
+		window.history.back();
+	}
+
+	ngOnInit() {
+		const id = +this._routeParams.get('id');
+
+		this._heroService.getHero(id).then(hero => this.hero = hero);
+	}
 }

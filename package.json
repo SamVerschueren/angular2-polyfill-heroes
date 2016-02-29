@@ -35,6 +35,7 @@
     },
     "dependencies": {
       "angular": "npm:angular@^1.5.0",
+      "angular-ui-router": "npm:angular-ui-router@^0.2.18",
       "angular2-polyfill": "npm:angular2-polyfill@^0.0.7",
       "ng-metadata": "npm:ng-metadata@^1.0.0"
     },
