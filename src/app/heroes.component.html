@@ -1,18 +1,18 @@
-<h1>{{myHeroes.title}}</h1>
+<h1>{{$ctrl.title}}</h1>
 
 <h2>My Heroes</h2>
 
 <ul class="heroes">
-	<li ng-repeat="hero in myHeroes.heroes"
-		ng-class="{selected: hero === myHeroes.selectedHero}"
-		ng-click="myHeroes.onSelect(hero)">
+	<li ng-repeat="hero in $ctrl.heroes"
+		ng-class="{selected: hero === $ctrl.selectedHero}"
+		ng-click="$ctrl.onSelect(hero)">
 		<span class="badge">{{hero.id}}</span> {{hero.name}}
 	</li>
 </ul>
 
-<div ng-if="myHeroes.selectedHero">
+<div ng-if="$ctrl.selectedHero">
 	<h2>
-		{{myHeroes.selectedHero.name | uppercase}} is my hero
+		{{$ctrl.selectedHero.name | uppercase}} is my hero
 	</h2>
-	<button ng-click="myHeroes.gotoDetail()">View Details</button>
+	<button ng-click="$ctrl.gotoDetail()">View Details</button>
 </div>

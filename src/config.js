@@ -10,11 +10,15 @@ System.config({
   map: {
     "angular": "npm:angular@1.5.0",
     "angular-ui-router": "npm:angular-ui-router@0.2.18",
-    "angular2-polyfill": "npm:angular2-polyfill@0.0.7",
+    "angular2-polyfill": "npm:angular2-polyfill@0.0.19",
     "ng-metadata": "npm:ng-metadata@1.0.0",
+    "reflect-metadata": "npm:reflect-metadata@0.1.3",
     "typescript": "npm:typescript@1.8.2",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
+    },
+    "github:jspm/nodelibs-path@0.1.0": {
+      "path-browserify": "npm:path-browserify@0.0.0"
     },
     "github:jspm/nodelibs-process@0.1.2": {
       "process": "npm:process@0.11.2"
@@ -26,16 +30,16 @@ System.config({
       "angular": "npm:angular@1.5.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
-    "npm:angular2-polyfill@0.0.7": {
-      "angular": "npm:angular@1.5.0",
-      "camelcase": "npm:camelcase@2.1.0",
-      "dot-prop": "npm:dot-prop@2.3.0",
-      "reflect-metadata": "npm:reflect-metadata@0.1.3"
+    "npm:angular2-polyfill@0.0.19": {
+      "camelcase": "npm:camelcase@2.1.1",
+      "decamelize": "npm:decamelize@1.2.0",
+      "dot-prop": "npm:dot-prop@2.4.0",
+      "path": "github:jspm/nodelibs-path@0.1.0"
     },
     "npm:assert@1.3.0": {
       "util": "npm:util@0.10.3"
     },
-    "npm:dot-prop@2.3.0": {
+    "npm:dot-prop@2.4.0": {
       "is-obj": "npm:is-obj@1.0.0"
     },
     "npm:inherits@2.0.1": {
@@ -44,6 +48,9 @@ System.config({
     "npm:ng-metadata@1.0.0": {
       "process": "github:jspm/nodelibs-process@0.1.2",
       "util": "github:jspm/nodelibs-util@0.1.0"
+    },
+    "npm:path-browserify@0.0.0": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:process@0.11.2": {
       "assert": "github:jspm/nodelibs-assert@0.1.0"

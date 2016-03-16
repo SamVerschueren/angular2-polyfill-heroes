@@ -8,7 +8,7 @@ import {HeroService} from './hero.service';
 @Component({
 	selector: 'my-app',
 	template: `
-		<h1>{{myApp.title}}</h1>
+		<h1>{{$ctrl.title}}</h1>
 
 		<nav>
 			<a href ui-sref="Dashboard" ui-sref-active="router-link-active">Dashboard</a>

@@ -9,7 +9,7 @@ import {Hero} from './hero';
 		<h3>Top Heroes</h3>
 
 		<div class="grid grid-pad">
-			<div ng-repeat="hero in myDashboard.heroes" ng-click="myDashboard.gotoDetail(hero)" class="col-1-4">
+			<div ng-repeat="hero in $ctrl.heroes" ng-click="$ctrl.gotoDetail(hero)" class="col-1-4">
 				<div class="module hero">
 					<h4>{{hero.name}}</h4>
 				</div>

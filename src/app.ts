@@ -1,5 +1,6 @@
 import * as angular from 'angular';
 import 'angular-ui-router';
+import 'reflect-metadata';
 import {bootstrap} from 'angular2-polyfill/platform/upgrade';
 import {AppComponent} from './app/app.component';
 
