@@ -6,7 +6,7 @@
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "lite": "cd src && lite-server",
-    "start": "concurrent \"npm run tsc:w\" \"npm run lite\"",
+    "start": "concurrently \"npm run tsc:w\" \"npm run lite\"",
     "typings": "typings",
     "postinstall": "npm run typings install && jspm install"
   },
